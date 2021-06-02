@@ -1,13 +1,41 @@
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
 import './app.css';
-import Book from './components/book';
+//import Book from './components/book';
+import Books from './components/books';
 
 function App() {
-  const title = '스프링';
-  //const msg = '여기에 자바스크립트를 작성할수 잇어용';
-  return < Book />
+  return <Books />
+  // class App extends Component {
+  //   eventIncrement = book => {
+  //     console.log(`eventIncrement ${book.name}`)
+  //     book.count++;
+  //     this.setState(this.state);
+  //   }
+  //   eventDecrement = book => {
+  //     console.log(`eventDecrement ${book.name}`)
+  //     book.count--;
+  //     this.setState(this.state);
+  //   }
+  //   eventDelete = book => {
+  //     console.log(`eventDelete ${book.name}`)
+  //     book.count = 0;
+  //     this.setState(this.state);
+  //   }
+  //   //const title = '스프링';
+  //   //const msg = '여기에 자바스크립트를 작성할수 잇어용';
+  //   //return < Book />
+  //   render() {
+  //     return (
+  //       <Books
+  //         onIncrement={this.eventIncrement}
+  //         onDecrement={this.eventDecrement}
+  //         onDelete={this.eventDelete}
+  //       />
+  //     );
+  //   }
   // return (
-  //   <Book>
+  //   <Books>
   //     <h1> Hello React!!! {title}</h1>
   //     <h1>쉽게 배우는 JSP</h1>
   //     {
@@ -33,7 +61,7 @@ function App() {
   //       ))
   //     }
 
-  //   </Book>
+  //   </Books>
   // );
 
 }
