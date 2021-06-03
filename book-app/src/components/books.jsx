@@ -11,18 +11,30 @@ class Books extends Component {
   };
   eventIncrement = book => {
     console.log(`eventIncrement ${book.name}`)
-    book.count++;
-    this.setState(this.state);
+    // book.count++;
+    // this.setState(this.state);
+    const books = [...this.state.books]
+    const index = books.indexOf(book);
+    books[index].count++;
+    this.setState({ books });
   }
   eventDecrement = book => {
     console.log(`eventDecrement ${book.name}`)
     book.count--;
     this.setState(this.state);
+    // const books = [...this.state.books]
+    // const index = books.indexOf(book);
+    // books[index].count--;
+    // this.setState({ books });
   }
   eventDelete = book => {
     console.log(`eventDelete ${book.name}`)
-    book.count = 0;
-    this.setState(this.state);
+    // book.count = 0;
+    // this.setState(this.state);
+    const books = [...this.state.books]
+    const index = books.indexOf(book);
+    books[index].count = 0;
+    this.setState({ books });
   }
   render() {
     return (
@@ -32,9 +44,9 @@ class Books extends Component {
             <Book
               key={book.id}
               book={book}
-            // onIcrement={this.eventIncrement}
-            // onDecremet={this.eventDecrement}
-            // onDelete={this.eventDelete}
+              onIncrement={this.eventIncrement}
+              onDecrement={this.eventDecrement}
+              onDelete={this.eventDelete}
             />
           ))
         }
